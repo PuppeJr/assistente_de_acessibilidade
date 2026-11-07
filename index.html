@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <title>Assistente de Acessibilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js"></script>
+    <script defer src="App.js"></script>
+</head>
+<body>
+    <main class="app">
+        <header>
+            <h1>Assistente de Acessibilidade</h1>
+            <p class="intro">A IA é executada neste computador. O celular funciona como câmera pela rede Wi-Fi local.</p>
+        </header>
+
+        <section class="panel setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">Conectar ao IP Webcam</h2>
+            <p>Abra o IP Webcam no Moto G10 e toque em <strong>Iniciar servidor</strong>. Digite o endereço IP exibido pelo aplicativo.</p>
+            <div class="connection-fields">
+                <label for="cameraHost">IP do celular</label>
+                <input id="cameraHost" type="text" inputmode="decimal" value="192.168.100.67" placeholder="Ex.: 192.168.1.9" autocomplete="off">
+                <label for="cameraPort">Porta</label>
+                <input id="cameraPort" type="number" min="1" max="65535" value="8080">
+            </div>
+            <button id="startButton" type="button">Iniciar monitoramento</button>
+        </section>
+
+        <section class="panel monitor" aria-labelledby="monitor-title">
+            <h2 id="monitor-title">Monitoramento</h2>
+            <p id="status" role="status" aria-live="polite">Pronto para conectar. O computador precisa estar conectado à internet para carregar o modelo.</p>
+            <div id="alerta" class="alert" role="status" aria-live="polite">Aguardando início</div>
+            <div class="camera-view">
+                <img id="cameraStream" alt="Imagem atual recebida do IP Webcam">
+                <canvas id="detectionCanvas" aria-hidden="true"></canvas>
+            </div>
+            <p id="detectedObjects" class="detected-objects" aria-live="off"></p>
+
+            <div class="controls">
+                <label class="toggle" for="voiceEnabled">
+                    <input id="voiceEnabled" type="checkbox" checked>
+                    Ativar alertas por voz
+                </label>
+                <label for="confidence">Sensibilidade: <output id="confidenceValue" for="confidence">50%</output></label>
+                <input id="confidence" type="range" min="30" max="90" value="50">
+            </div>
+        </section>
+
+        <aside class="notice">
+            <strong>Importante:</strong> os retângulos destacam objetos que o modelo reconheceu, não confirmam que sejam obstáculos
+            nem medem distância. A IA pode não detectar objetos ou identificá-los incorretamente. “Nenhum objeto reconhecido”
+            não significa que o caminho esteja livre. Não use como substituto de bengala, cão-guia ou outros recursos de orientação
+            e mobilidade.
+        </aside>
+    </main>
+</body>
+</html>
