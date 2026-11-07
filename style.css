@@ -1,192 +1,192 @@
-:root {
-    color-scheme: dark;
-    font-family: Arial, sans-serif;
-    background: #111827;
-    color: #f9fafb;
-}
+:root { /* Define as cores e a tipografia padrão da interface. */
+    color-scheme: dark; /* Solicita controles nativos compatíveis com o tema escuro. */
+    font-family: Arial, sans-serif; /* Define a família tipográfica padrão da interface. */
+    background: #111827; /* Aplica o fundo escuro em toda a página. */
+    color: #f9fafb; /* Define o texto claro padrão para manter contraste com o fundo. */
+} /* Encerra as variáveis e estilos globais da página. */
 
-* {
-    box-sizing: border-box;
-}
+* { /* Aplica o mesmo modelo de dimensionamento a todos os elementos. */
+    box-sizing: border-box; /* Inclui bordas e espaçamentos no cálculo das dimensões dos elementos. */
+} /* Encerra a regra global de dimensionamento. */
 
-body {
-    margin: 0;
-    padding: 24px;
-}
+body { /* Configura o espaço externo do documento. */
+    margin: 0; /* Remove a margem padrão aplicada pelo navegador. */
+    padding: 24px; /* Mantém um espaço entre o conteúdo e as bordas da janela. */
+} /* Encerra a configuração do corpo da página. */
 
-.app {
-    width: min(100%, 820px);
-    margin: 0 auto;
-}
+.app { /* Restringe e centraliza o conteúdo principal. */
+    width: min(100%, 820px); /* Limita a largura sem ultrapassar a tela em dispositivos estreitos. */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente. */
+} /* Encerra o contêiner principal da aplicação. */
 
-h1 {
-    margin: 0 0 8px;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-}
+h1 { /* Estiliza o título principal. */
+    margin: 0 0 8px; /* Remove margens superiores e separa o título do texto seguinte. */
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Ajusta o tamanho do título conforme a largura da tela. */
+} /* Encerra a apresentação do título principal. */
 
-h2 {
-    margin: 0 0 16px;
-    font-size: 1.35rem;
-}
+h2 { /* Estiliza os títulos das seções. */
+    margin: 0 0 16px; /* Separa cada título de seção do conteúdo abaixo. */
+    font-size: 1.35rem; /* Define o tamanho dos títulos de seção. */
+} /* Encerra a apresentação dos títulos de seção. */
 
-p {
-    line-height: 1.55;
-}
+p { /* Define a legibilidade padrão dos parágrafos. */
+    line-height: 1.55; /* Melhora a legibilidade do texto corrido. */
+} /* Encerra o estilo padrão dos parágrafos. */
 
-.intro {
-    color: #d1d5db;
-}
+.intro { /* Diferencia visualmente o texto de introdução. */
+    color: #d1d5db; /* Diferencia o texto introdutório sem reduzir seu contraste. */
+} /* Encerra o destaque visual da introdução. */
 
-.panel {
-    margin-top: 20px;
-    padding: 22px;
-    border: 1px solid #4b5563;
-    border-radius: 12px;
-    background: #1f2937;
-}
+.panel { /* Apresenta seções da aplicação em painéis destacados. */
+    margin-top: 20px; /* Separa os painéis de outras seções. */
+    padding: 22px; /* Cria espaço interno ao redor do conteúdo do painel. */
+    border: 1px solid #4b5563; /* Delimita o painel com uma borda discreta. */
+    border-radius: 12px; /* Arredonda os cantos do painel. */
+    background: #1f2937; /* Diferencia o painel do fundo geral. */
+} /* Encerra o estilo compartilhado pelos painéis. */
 
-.connection-fields {
-    display: grid;
-    grid-template-columns: 1fr minmax(90px, 130px);
-    gap: 8px 14px;
-    align-items: center;
-    margin: 18px 0;
-}
+.connection-fields { /* Organiza os campos de conexão em uma grade. */
+    display: grid; /* Organiza rótulos e campos em uma grade. */
+    grid-template-columns: 1fr minmax(90px, 130px); /* Reserva a coluna principal para os dados e limita a coluna da porta. */
+    gap: 8px 14px; /* Define espaçamento vertical e horizontal entre controles. */
+    align-items: center; /* Alinha rótulos e campos pelo centro vertical. */
+    margin: 18px 0; /* Separa a grade do texto e do botão. */
+} /* Encerra o layout dos campos de conexão. */
 
-label {
-    font-weight: 700;
-}
+label { /* Destaca os nomes dos controles. */
+    font-weight: 700; /* Destaca os nomes associados aos controles. */
+} /* Encerra o estilo comum dos rótulos. */
 
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    min-height: 44px;
-    padding: 9px 12px;
-    border: 2px solid #9ca3af;
-    border-radius: 6px;
-    background: #fff;
-    color: #111827;
-    font: inherit;
-}
+input[type="text"], /* Aplica o estilo comum ao campo de endereço. */
+input[type="number"] { /* Aplica o estilo comum ao campo da porta. */
+    width: 100%; /* Faz os campos ocuparem a largura disponível na grade. */
+    min-height: 44px; /* Mantém uma área de interação confortável. */
+    padding: 9px 12px; /* Cria espaço interno para o texto digitado. */
+    border: 2px solid #9ca3af; /* Delimita o campo com uma borda visível. */
+    border-radius: 6px; /* Arredonda levemente os cantos dos campos. */
+    background: #fff; /* Usa fundo claro para destacar a área de entrada. */
+    color: #111827; /* Mantém o texto digitado escuro sobre fundo claro. */
+    font: inherit; /* Reutiliza a família e as propriedades tipográficas da interface. */
+} /* Encerra os estilos dos campos de texto e número. */
 
-button {
-    min-height: 48px;
-    padding: 10px 18px;
-    border: 2px solid #facc15;
-    border-radius: 7px;
-    background: #facc15;
-    color: #111827;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
+button { /* Destaca a ação principal da interface. */
+    min-height: 48px; /* Mantém o botão grande o suficiente para interação acessível. */
+    padding: 10px 18px; /* Define o espaço interno ao redor do rótulo do botão. */
+    border: 2px solid #facc15; /* Destaca o contorno do botão em amarelo. */
+    border-radius: 7px; /* Arredonda os cantos do botão. */
+    background: #facc15; /* Usa amarelo para destacar a ação principal. */
+    color: #111827; /* Garante contraste do texto escuro sobre o fundo claro. */
+    font: inherit; /* Mantém a tipografia consistente com o restante da página. */
+    font-weight: 700; /* Destaca o texto da ação principal. */
+    cursor: pointer; /* Indica que o botão pode ser acionado. */
+} /* Encerra a aparência padrão do botão. */
 
-button:hover {
-    background: #fde047;
-}
+button:hover { /* Indica visualmente quando o ponteiro está sobre o botão. */
+    background: #fde047; /* Clareia o fundo para indicar a interação do ponteiro. */
+} /* Encerra o estado visual de foco do ponteiro. */
 
-button:disabled {
-    cursor: wait;
-    opacity: 0.7;
-}
+button:disabled { /* Indica que o botão está temporariamente indisponível. */
+    cursor: wait; /* Indica que uma operação está em andamento. */
+    opacity: 0.7; /* Reduz o destaque do botão enquanto está indisponível. */
+} /* Encerra a aparência de botão desabilitado. */
 
-:focus-visible {
-    outline: 3px solid #38bdf8;
-    outline-offset: 3px;
-}
+:focus-visible { /* Exibe um indicador de foco para navegação por teclado. */
+    outline: 3px solid #38bdf8; /* Mostra um contorno visível ao navegar pelo teclado. */
+    outline-offset: 3px; /* Afasta o contorno para que não se confunda com a borda do controle. */
+} /* Encerra o indicador de foco acessível. */
 
-#status {
-    min-height: 48px;
-    color: #fde68a;
-    line-height: 1.5;
-}
+#status { /* Reserva espaço e define a cor das mensagens de estado. */
+    min-height: 48px; /* Reserva espaço para mensagens de status maiores. */
+    color: #fde68a; /* Destaca as informações sobre o estado do sistema. */
+    line-height: 1.5; /* Mantém a mensagem legível quando ocupa várias linhas. */
+} /* Encerra o estilo das mensagens de status. */
 
-.alert {
-    min-height: 72px;
-    margin: 12px 0;
-    padding: 14px;
-    border: 2px solid #f87171;
-    border-radius: 8px;
-    background: #450a0a;
-    color: #fff;
-    font-size: clamp(1.3rem, 4vw, 2rem);
-    font-weight: 700;
-}
+.alert { /* Formata o aviso principal da aplicação. */
+    min-height: 72px; /* Reserva área suficiente para o aviso principal. */
+    margin: 12px 0; /* Separa o aviso dos elementos vizinhos. */
+    padding: 14px; /* Cria espaço interno para o conteúdo do aviso. */
+    border: 2px solid #f87171; /* Destaca o aviso com uma borda vermelha. */
+    border-radius: 8px; /* Arredonda os cantos da caixa de aviso. */
+    background: #450a0a; /* Aplica um fundo escuro avermelhado ao aviso. */
+    color: #fff; /* Mantém o texto do aviso claro e legível. */
+    font-size: clamp(1.3rem, 4vw, 2rem); /* Ajusta o tamanho do aviso à tela sem exageros. */
+    font-weight: 700; /* Destaca visualmente o conteúdo do aviso. */
+} /* Encerra a apresentação dos avisos principais. */
 
-.camera-view {
-    position: relative;
-    width: min(100%, 640px);
-    margin: 16px auto;
-    background: #030712;
-    border-radius: 8px;
-    overflow: hidden;
-}
+.camera-view { /* Posiciona e delimita a imagem e o canvas sobreposto. */
+    position: relative; /* Serve de referência para sobrepor o canvas à imagem. */
+    width: min(100%, 640px); /* Limita a largura da câmera e permite adaptação à tela. */
+    margin: 16px auto; /* Centraliza a visualização e a separa dos demais elementos. */
+    background: #030712; /* Preenche a área vazia com fundo escuro. */
+    border-radius: 8px; /* Arredonda os cantos da visualização da câmera. */
+    overflow: hidden; /* Esconde conteúdo que ultrapasse os limites arredondados. */
+} /* Encerra o contêiner da imagem e das marcações. */
 
-#cameraStream {
-    display: block;
-    width: 100%;
-    min-height: 40px;
-    height: auto;
-}
+#cameraStream { /* Ajusta a imagem recebida ao contêiner de câmera. */
+    display: block; /* Remove o espaço em linha que imagens podem receber por padrão. */
+    width: 100%; /* Faz a imagem ocupar a largura do contêiner. */
+    min-height: 40px; /* Reserva uma altura mínima antes do primeiro quadro carregar. */
+    height: auto; /* Preserva a proporção original da imagem. */
+} /* Encerra a apresentação do quadro da câmera. */
 
-#detectionCanvas {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
+#detectionCanvas { /* Sobrepõe a camada de desenho à imagem. */
+    position: absolute; /* Sobrepõe o canvas à imagem sem afetar o fluxo do documento. */
+    inset: 0; /* Alinha todos os lados do canvas aos limites do contêiner. */
+    pointer-events: none; /* Permite que cliques atravessem a camada de desenho. */
+} /* Encerra o posicionamento da camada de detecções. */
 
-.detected-objects {
-    min-height: 1.5em;
-    color: #fde68a;
-    font-weight: 700;
-    background: #030712;
-}
+.detected-objects { /* Destaca a lista de objetos reconhecidos. */
+    min-height: 1.5em; /* Reserva espaço para a lista, evitando mudanças bruscas de layout. */
+    color: #fde68a; /* Destaca os nomes dos objetos detectados. */
+    font-weight: 700; /* Torna os resultados mais fáceis de localizar visualmente. */
+    background: #030712; /* Mantém contraste entre os resultados e o painel. */
+} /* Encerra o estilo da lista de detecções. */
 
-.controls {
-    display: grid;
-    gap: 12px;
-}
+.controls { /* Organiza os controles em linhas com espaçamento. */
+    display: grid; /* Organiza os controles em linhas. */
+    gap: 12px; /* Separa as opções de voz e sensibilidade. */
+} /* Encerra o layout dos controles. */
 
-.toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 44px;
-}
+.toggle { /* Alinha a caixa de seleção com seu rótulo. */
+    display: flex; /* Alinha a caixa de seleção e seu texto na mesma linha. */
+    align-items: center; /* Centraliza verticalmente o texto e a caixa de seleção. */
+    gap: 10px; /* Mantém uma distância entre o controle e sua descrição. */
+    min-height: 44px; /* Garante uma área de interação confortável. */
+} /* Encerra o layout da opção de voz. */
 
-input[type="checkbox"],
-input[type="range"] {
-    accent-color: #facc15;
-}
+input[type="checkbox"], /* Aplica a cor de destaque à caixa de seleção. */
+input[type="range"] { /* Aplica a cor de destaque ao controle de faixa. */
+    accent-color: #facc15; /* Aplica a cor de destaque aos controles nativos. */
+} /* Encerra a personalização dos controles de seleção e faixa. */
 
-input[type="checkbox"] {
-    width: 22px;
-    height: 22px;
-}
+input[type="checkbox"] { /* Define uma área visual adequada para a caixa de seleção. */
+    width: 22px; /* Define a largura da caixa de seleção. */
+    height: 22px; /* Define a altura da caixa de seleção. */
+} /* Encerra o dimensionamento da caixa de seleção. */
 
-#confidence {
-    width: 100%;
-    min-height: 30px;
-}
+#confidence { /* Dimensiona o controle de sensibilidade. */
+    width: 100%; /* Faz o controle de sensibilidade ocupar a largura disponível. */
+    min-height: 30px; /* Mantém uma área mínima para manipular a faixa. */
+} /* Encerra o dimensionamento do controle de sensibilidade. */
 
-.notice {
-    margin: 20px 0;
-    padding: 16px;
-    border-left: 5px solid #facc15;
-    background: #292524;
-    line-height: 1.6;
-}
+.notice { /* Destaca o aviso sobre limitações e uso seguro. */
+    margin: 20px 0; /* Separa o aviso de segurança do restante da interface. */
+    padding: 16px; /* Cria espaço entre o texto e as bordas do aviso. */
+    border-left: 5px solid #facc15; /* Marca visualmente o aviso como informação importante. */
+    background: #292524; /* Diferencia o bloco do fundo principal. */
+    line-height: 1.6; /* Facilita a leitura do texto mais longo. */
+} /* Encerra a apresentação do aviso de segurança. */
 
-@media (max-width: 520px) {
-    body {
-        padding: 14px;
-    }
+@media (max-width: 520px) { /* Ajusta o layout para telas estreitas, como celulares. */
+    body { /* Aplica o espaçamento compacto ao corpo em telas estreitas. */
+        padding: 14px; /* Reduz o espaço lateral para aproveitar melhor telas pequenas. */
+    } /* Encerra o ajuste de espaçamento do corpo em telas estreitas. */
 
-    .panel {
-        padding: 16px;
-    }
+    .panel { /* Compacta os painéis em telas estreitas. */
+        padding: 16px; /* Reduz o espaço interno dos painéis em telas pequenas. */
+    } /* Encerra o ajuste dos painéis para telas estreitas. */
 
-    .connection-fields {
-        grid-template-columns: 1fr;
-    }
-}
+    .connection-fields { /* Empilha os campos de conexão em telas estreitas. */
+        grid-template-columns: 1fr; /* Empilha os campos de conexão em uma única coluna. */
+    } /* Encerra a adaptação da grade de conexão. */
+} /* Encerra as regras responsivas para telas estreitas. */
